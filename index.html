@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>你的名字｜個人網站</title>
+  <meta name="description" content="你的名字的個人網站：關於我、作品與聯絡方式。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="logo" href="#top">你的名字</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#study">Current Study</a>
+      <a href="#course">Current Course</a>
+      <a href="#research">Current Research</a>
+      <a href="#works">Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </aside>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">Hello, 我是</p>
+      <h1>你的名字</h1>
+      <p class="lead">一句話介紹你自己，例如：喜歡把複雜的事情變簡單的設計師與開發者。</p>
+      <a class="btn" href="#works">看看我的作品</a>
+    </section>
+
+    <section id="about">
+      <h2>關於我</h2>
+      <p>在這裡寫一段自我介紹：你的背景、你在做什麼、你關心什麼。保持簡短、自然，像跟朋友聊天一樣就好。</p>
+      <p>你也可以提到平常的興趣，例如咖啡、閱讀、攝影或旅行。</p>
+    </section>
+
+    <section id="study">
+      <h2>Current Study</h2>
+      <ul class="tags">
+        <li>AMO</li>
+        <li>Quantum Information</li>
+        <li>Computer Architecture</li>
+      </ul>
+      <p>AMO（Atomic, Molecular, and Optical physics）、量子資訊與計算機架構，是我目前主要學習的三個領域。</p>
+    </section>
+
+    <section id="course">
+      <h2>Current Course</h2>
+      <ul class="list">
+        <li><span>課程名稱一</span><em>授課老師／學期</em></li>
+        <li><span>課程名稱二</span><em>授課老師／學期</em></li>
+        <li><span>課程名稱三</span><em>授課老師／學期</em></li>
+      </ul>
+    </section>
+
+    <section id="research">
+      <h2>Current Research</h2>
+      <p>在這裡簡述你目前的研究主題、所屬實驗室或指導教授，以及你負責的部分。</p>
+    </section>
+
+    <section id="works">
+      <h2>作品</h2>
+      <div class="cards">
+        <a class="card" href="#">
+          <h3>專案名稱一</h3>
+          <p>簡短說明這個專案做了什麼、你負責的部分。</p>
+          <span class="year">2025</span>
+        </a>
+        <a class="card" href="#">
+          <h3>專案名稱二</h3>
+          <p>簡短說明這個專案做了什麼、你負責的部分。</p>
+          <span class="year">2024</span>
+        </a>
+        <a class="card" href="#">
+          <h3>專案名稱三</h3>
+          <p>簡短說明這個專案做了什麼、你負責的部分。</p>
+          <span class="year">2023</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>聯絡我</h2>
+      <p>想合作或只是打個招呼，都歡迎來信。</p>
+      <p><a class="mail" href="mailto:elitian01180118@gmail.com">elitian01180118@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year">2026</span> 你的名字</p>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
