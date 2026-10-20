@@ -1,95 +1,206 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>你的名字｜個人網站</title>
-  <meta name="description" content="你的名字的個人網站：關於我、作品與聯絡方式。">
+  <title>Your Name — AMO, Quantum Information &amp; Computer Architecture</title>
+  <meta name="description" content="Personal website of Your Name. Studying atomic, molecular &amp; optical physics, quantum information, and computer architecture.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <aside class="sidebar">
-    <a class="logo" href="#top">你的名字</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#study">Current Study</a>
-      <a href="#course">Current Course</a>
-      <a href="#research">Current Research</a>
-      <a href="#works">Works</a>
-      <a href="#contact">Contact</a>
+    <a class="logo" href="#top" aria-label="Home"><span class="mark">YN</span><span class="logo-text">Your Name</span></a>
+    <nav aria-label="Sections">
+      <a href="#news"><span>01</span>News</a>
+      <a href="#study"><span>02</span>Current Study</a>
+      <a href="#research"><span>03</span>Current Research</a>
+      <a href="#works"><span>04</span>Works</a>
+      <a href="#contact"><span>05</span>Contact</a>
     </nav>
+    <p class="side-note">AMO · Quantum Info · Architecture</p>
   </aside>
 
   <main id="top">
+    <!-- Hero: name on the left, About Me on the right -->
     <section class="hero">
-      <p class="eyebrow">Hello, 我是</p>
-      <h1>你的名字</h1>
-      <p class="lead">一句話介紹你自己，例如：喜歡把複雜的事情變簡單的設計師與開發者。</p>
-      <a class="btn" href="#works">看看我的作品</a>
+      <div class="hero-name">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Your<br>Name</h1>
+        <p class="role">Student · Physics &amp; Computing</p>
+        <ul class="chips">
+          <li># AMO</li>
+          <li># Quantum Information</li>
+          <li># Computer Architecture</li>
+        </ul>
+      </div>
+      <div class="hero-about" id="about">
+        <h2 class="label">About Me</h2>
+        <p>I am a student at <strong>Your University</strong> interested in how physical systems become machines that compute — from trapped atoms and photons to the silicon pipelines inside a modern processor.</p>
+        <p>My current focus is atomic, molecular &amp; optical (AMO) physics, quantum information, and computer architecture. I like understanding things down to the mechanism, and then building them.</p>
+        <p>Outside of study, I enjoy engines, racing, and coffee.</p>
+      </div>
     </section>
 
-    <section id="about">
-      <h2>關於我</h2>
-      <p>在這裡寫一段自我介紹：你的背景、你在做什麼、你關心什麼。保持簡短、自然，像跟朋友聊天一樣就好。</p>
-      <p>你也可以提到平常的興趣，例如咖啡、閱讀、攝影或旅行。</p>
+    <!-- Live crank-slider engine -->
+    <figure class="engine-panel" aria-label="Animated cross-section of a single-cylinder engine">
+      <svg id="engine" viewBox="0 0 640 330" role="img" aria-labelledby="engine-title">
+        <title id="engine-title">Animated single-cylinder four-stroke engine cross-section</title>
+        <defs>
+          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M20 0H0V20" fill="none" stroke="var(--line)" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect width="640" height="330" fill="url(#grid)"/>
+
+        <!-- cylinder block -->
+        <g fill="none" stroke="var(--heading)" stroke-width="2.5" stroke-linejoin="round">
+          <path d="M248 205V40h144v165"/>
+          <path d="M232 40h176"/>
+          <path d="M290 40V22h24v18M326 40V22h24v18" stroke-width="2"/>
+          <path d="M248 205c-40 8-58 40-58 70M392 205c40 8 58 40 58 70" stroke-width="2"/>
+        </g>
+        <!-- spark plug -->
+        <path d="M320 40V12M312 12h16" stroke="var(--heading)" stroke-width="2.5" fill="none"/>
+        <!-- combustion glow -->
+        <ellipse id="burn" cx="320" cy="70" rx="58" ry="28" fill="var(--accent)" opacity="0"/>
+
+        <!-- piston + rod -->
+        <rect id="piston" x="254" y="80" width="132" height="40" rx="5" fill="var(--surface)" stroke="var(--accent)" stroke-width="2.5"/>
+        <path id="rings" d="M254 90h132M254 98h132" stroke="var(--accent)" stroke-width="1.5" opacity=".55"/>
+        <line id="rod" x1="320" y1="100" x2="320" y2="250" stroke="var(--heading)" stroke-width="7" stroke-linecap="round"/>
+        <circle id="wristpin" cx="320" cy="100" r="6" fill="var(--bg)" stroke="var(--heading)" stroke-width="2.5"/>
+
+        <!-- flywheel / crank -->
+        <g id="flywheel">
+          <circle cx="320" cy="250" r="70" fill="var(--surface)" stroke="var(--heading)" stroke-width="2.5"/>
+          <circle cx="320" cy="250" r="56" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="3 6"/>
+          <path d="M320 180v28M320 292v28M250 250h28M362 250h28" stroke="var(--muted)" stroke-width="1.5"/>
+          <path d="M320 250L320 210" stroke="var(--heading)" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="320" cy="210" r="9" fill="var(--accent)"/>
+        </g>
+        <circle cx="320" cy="250" r="9" fill="var(--bg)" stroke="var(--heading)" stroke-width="2.5"/>
+
+        <!-- labels -->
+        <g font-family="JetBrains Mono, monospace" font-size="12" fill="var(--text)">
+          <text x="24" y="38">4-STROKE · SINGLE CYL.</text>
+          <text x="24" y="58" fill="var(--accent)" id="stroke-label">INTAKE</text>
+          <text x="24" y="316">CRANK ANGLE</text>
+          <text x="130" y="316" id="angle-label" fill="var(--accent)">000°</text>
+          <text x="520" y="38">TDC</text>
+          <line x1="470" y1="34" x2="514" y2="34" stroke="var(--muted)" stroke-dasharray="3 4"/>
+          <text x="520" y="190">BDC</text>
+          <line x1="470" y1="186" x2="514" y2="186" stroke="var(--muted)" stroke-dasharray="3 4"/>
+        </g>
+      </svg>
+      <figcaption>Crank–slider mechanism, drawn live. Replace with your own engine photo any time.</figcaption>
+    </figure>
+
+    <section id="news">
+      <h2 class="section-title">News</h2>
+      <ul class="news">
+        <li><span class="date">Oct. 2026</span><p>Launched this personal website.</p></li>
+        <li><span class="date">Month 2026</span><p>Add a milestone here — a new course, a lab you joined, a talk you gave.</p></li>
+        <li><span class="date">Month 2026</span><p>Add another update here. Keep each one to a sentence or two.</p></li>
+      </ul>
     </section>
 
     <section id="study">
-      <h2>Current Study</h2>
-      <ul class="tags">
-        <li>AMO</li>
-        <li>Quantum Information</li>
-        <li>Computer Architecture</li>
-      </ul>
-      <p>AMO（Atomic, Molecular, and Optical physics）、量子資訊與計算機架構，是我目前主要學習的三個領域。</p>
-    </section>
-
-    <section id="course">
-      <h2>Current Course</h2>
-      <ul class="list">
-        <li><span>課程名稱一</span><em>授課老師／學期</em></li>
-        <li><span>課程名稱二</span><em>授課老師／學期</em></li>
-        <li><span>課程名稱三</span><em>授課老師／學期</em></li>
+      <h2 class="section-title">Current Study</h2>
+      <div class="cards three">
+        <article class="card">
+          <svg class="icon atom" viewBox="0 0 80 80" aria-hidden="true">
+            <g fill="none" stroke="var(--accent)" stroke-width="2">
+              <ellipse cx="40" cy="40" rx="32" ry="12"/>
+              <ellipse cx="40" cy="40" rx="32" ry="12" transform="rotate(60 40 40)"/>
+              <ellipse cx="40" cy="40" rx="32" ry="12" transform="rotate(120 40 40)"/>
+            </g>
+            <circle cx="40" cy="40" r="5" fill="var(--heading)"/>
+          </svg>
+          <h3>AMO</h3>
+          <p>Atomic, molecular &amp; optical physics: how light and matter interact, from laser cooling to trapped atoms and ions.</p>
+        </article>
+        <article class="card">
+          <svg class="icon qubit" viewBox="0 0 80 80" aria-hidden="true">
+            <g fill="none" stroke="var(--accent)" stroke-width="2">
+              <circle cx="40" cy="40" r="30"/>
+              <ellipse cx="40" cy="40" rx="30" ry="10"/>
+              <path d="M40 10v60" stroke-dasharray="3 4"/>
+            </g>
+            <path class="state" d="M40 40L58 22" stroke="var(--heading)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="58" cy="22" r="4" fill="var(--heading)"/>
+          </svg>
+          <h3>Quantum Information</h3>
+          <p>Qubits, gates, and error correction: what quantum states let us compute, and what it takes to protect them.</p>
+        </article>
+        <article class="card">
+          <svg class="icon chip" viewBox="0 0 80 80" aria-hidden="true">
+            <g fill="none" stroke="var(--accent)" stroke-width="2">
+              <rect x="20" y="20" width="40" height="40" rx="4"/>
+              <path d="M30 10v10M40 10v10M50 10v10M30 60v10M40 60v10M50 60v10M10 30h10M10 40h10M10 50h10M60 30h10M60 40h10M60 50h10"/>
+            </g>
+            <rect class="core" x="31" y="31" width="18" height="18" rx="2" fill="var(--heading)"/>
+          </svg>
+          <h3>Computer Architecture</h3>
+          <p>Pipelines, caches, and memory systems: how a processor turns instructions into work, and where the time goes.</p>
+        </article>
+      </div>
+      <h3 class="sub">Courses this term</h3>
+      <ul class="rows">
+        <li><span>Course name one</span><em>Instructor · Term</em></li>
+        <li><span>Course name two</span><em>Instructor · Term</em></li>
+        <li><span>Course name three</span><em>Instructor · Term</em></li>
       </ul>
     </section>
 
     <section id="research">
-      <h2>Current Research</h2>
-      <p>在這裡簡述你目前的研究主題、所屬實驗室或指導教授，以及你負責的部分。</p>
+      <h2 class="section-title">Current Research</h2>
+      <article class="card wide">
+        <p class="meta">Lab / Group · Advisor</p>
+        <h3>Your research project title</h3>
+        <p>Describe the question you are working on, why it matters, and what you personally do — building an apparatus, running simulations, analyzing data. Two or three sentences is plenty.</p>
+        <ul class="chips small">
+          <li>Topic</li>
+          <li>Method</li>
+          <li>Tool</li>
+        </ul>
+      </article>
     </section>
 
     <section id="works">
-      <h2>作品</h2>
+      <h2 class="section-title">Works</h2>
       <div class="cards">
-        <a class="card" href="#">
-          <h3>專案名稱一</h3>
-          <p>簡短說明這個專案做了什麼、你負責的部分。</p>
-          <span class="year">2025</span>
+        <a class="card link" href="#">
+          <span class="year">2026</span>
+          <h3>Project name one</h3>
+          <p>One sentence on what it does and what you built. Example: a small CPU simulator with a five-stage pipeline.</p>
+          <ul class="chips small"><li>Code</li><li>Write-up</li></ul>
         </a>
-        <a class="card" href="#">
-          <h3>專案名稱二</h3>
-          <p>簡短說明這個專案做了什麼、你負責的部分。</p>
-          <span class="year">2024</span>
-        </a>
-        <a class="card" href="#">
-          <h3>專案名稱三</h3>
-          <p>簡短說明這個專案做了什麼、你負責的部分。</p>
-          <span class="year">2023</span>
+        <a class="card link" href="#">
+          <span class="year">2026</span>
+          <h3>Project name two</h3>
+          <p>One sentence on what it does and what you built. Example: a qubit simulator that visualizes gates on the Bloch sphere.</p>
+          <ul class="chips small"><li>Code</li></ul>
         </a>
       </div>
     </section>
 
     <section id="contact">
-      <h2>聯絡我</h2>
-      <p>想合作或只是打個招呼，都歡迎來信。</p>
-      <p><a class="mail" href="mailto:elitian01180118@gmail.com">elitian01180118@gmail.com</a></p>
+      <h2 class="section-title">Contact</h2>
+      <p>Open to conversations about research, projects, and collaboration.</p>
+      <p class="contact-links">
+        <a href="mailto:elitian01180118@gmail.com">elitian01180118@gmail.com</a>
+        <a href="https://github.com/elitian01180118-cmyk" rel="noopener">GitHub</a>
+      </p>
     </section>
+
+    <footer>
+      <p>© <span id="year">2026</span> Your Name</p>
+    </footer>
   </main>
 
-  <footer>
-    <p>© <span id="year">2026</span> 你的名字</p>
-  </footer>
-
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="main.js"></script>
 </body>
 </html>
