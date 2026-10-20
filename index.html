@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name — AMO, Quantum Information &amp; Computer Architecture</title>
-  <meta name="description" content="Personal website of Your Name. Studying atomic, molecular &amp; optical physics, quantum information, and computer architecture.">
+  <title>Yi Chen 陳毅 — AMO, Quantum Information &amp; Plasma Physics</title>
+  <meta name="description" content="Personal website of Yi Chen (陳毅). Studying atomic, molecular &amp; optical physics, quantum information, black-hole plasma, and electronics.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
 </head>
 <body>
   <aside class="sidebar">
-    <a class="logo" href="#top" aria-label="Home"><span class="mark">YN</span><span class="logo-text">Your Name</span></a>
+    <a class="logo" href="#top" aria-label="Home"><span class="mark">YC</span><span class="logo-text">Yi Chen 陳毅</span></a>
     <nav aria-label="Sections">
       <a href="#news"><span>01</span>News</a>
       <a href="#study"><span>02</span>Current Study</a>
@@ -20,7 +20,7 @@
       <a href="#works"><span>04</span>Works</a>
       <a href="#contact"><span>05</span>Contact</a>
     </nav>
-    <p class="side-note">AMO · Quantum Info · Architecture</p>
+    <p class="side-note">AMO · Quantum Info · Plasma</p>
   </aside>
 
   <main id="top">
@@ -28,19 +28,20 @@
     <section class="hero">
       <div class="hero-name">
         <p class="eyebrow">Hello, I'm</p>
-        <h1>Your<br>Name</h1>
-        <p class="role">Student · Physics &amp; Computing</p>
+        <h1>Yi<br>Chen</h1>
+        <p class="role">陳毅 · I love hard academic research, and I want to try a startup too.</p>
         <ul class="chips">
           <li># AMO</li>
           <li># Quantum Information</li>
-          <li># Computer Architecture</li>
+          <li># Plasma Physics</li>
+          <li># Electronics</li>
         </ul>
       </div>
       <div class="hero-about" id="about">
         <h2 class="label">About Me</h2>
-        <p>I am a student at <strong>Your University</strong> interested in how physical systems become machines that compute — from trapped atoms and photons to the silicon pipelines inside a modern processor.</p>
-        <p>My current focus is atomic, molecular &amp; optical (AMO) physics, quantum information, and computer architecture. I like understanding things down to the mechanism, and then building them.</p>
-        <p>Outside of study, I enjoy engines, racing, and coffee.</p>
+        <p>I am a student drawn to hard problems in physics — from atoms and light to quantum information and the plasma around black holes — and to the electronics that let us measure and control them.</p>
+        <p>I like making progress, reading self-improvement books, and taking long walks.</p>
+        <p>Alongside academic research, I'm curious about building something of my own, so I'm also exploring startups.</p>
       </div>
     </section>
 
@@ -109,7 +110,7 @@
 
     <section id="study">
       <h2 class="section-title">Current Study</h2>
-      <div class="cards three">
+      <div class="cards four">
         <article class="card">
           <svg class="icon atom" viewBox="0 0 80 80" aria-hidden="true">
             <g fill="none" stroke="var(--accent)" stroke-width="2">
@@ -136,15 +137,24 @@
           <p>Qubits, gates, and error correction: what quantum states let us compute, and what it takes to protect them.</p>
         </article>
         <article class="card">
-          <svg class="icon chip" viewBox="0 0 80 80" aria-hidden="true">
+          <svg class="icon bh" viewBox="0 0 80 80" aria-hidden="true">
             <g fill="none" stroke="var(--accent)" stroke-width="2">
-              <rect x="20" y="20" width="40" height="40" rx="4"/>
-              <path d="M30 10v10M40 10v10M50 10v10M30 60v10M40 60v10M50 60v10M10 30h10M10 40h10M10 50h10M60 30h10M60 40h10M60 50h10"/>
+              <ellipse class="disk" cx="40" cy="40" rx="34" ry="10"/>
+              <ellipse class="disk d2" cx="40" cy="40" rx="24" ry="6" opacity=".6"/>
             </g>
-            <rect class="core" x="31" y="31" width="18" height="18" rx="2" fill="var(--heading)"/>
+            <circle cx="40" cy="40" r="11" fill="var(--heading)"/>
           </svg>
-          <h3>Computer Architecture</h3>
-          <p>Pipelines, caches, and memory systems: how a processor turns instructions into work, and where the time goes.</p>
+          <h3>Plasma in Black Holes</h3>
+          <p>Hot, magnetized plasma spiraling around black holes: accretion disks, jets, and the physics that powers them.</p>
+        </article>
+        <article class="card">
+          <svg class="icon circuit" viewBox="0 0 80 80" aria-hidden="true">
+            <path class="wire" d="M8 40h14l6-14 8 28 8-28 6 14h22" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="8" cy="40" r="3" fill="var(--heading)"/>
+            <circle cx="72" cy="40" r="3" fill="var(--heading)"/>
+          </svg>
+          <h3>Electronics</h3>
+          <p>Analog and digital circuits: the instruments and signal chains that turn physical effects into measurable data.</p>
         </article>
       </div>
       <h3 class="sub">Courses this term</h3>
@@ -197,7 +207,7 @@
     </section>
 
     <footer>
-      <p>© <span id="year">2026</span> Your Name</p>
+      <p>© <span id="year">2026</span> Yi Chen 陳毅</p>
     </footer>
   </main>
 

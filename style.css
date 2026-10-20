@@ -140,7 +140,7 @@ h1 { color: var(--heading); font-size: clamp(3rem, 7vw, 5.2rem); font-weight: 70
 
 /* ---------- Cards ---------- */
 .cards { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-.cards.three { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.cards.four { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .card {
   position: relative;
   display: block;
@@ -163,9 +163,12 @@ h1 { color: var(--heading); font-size: clamp(3rem, 7vw, 5.2rem); font-weight: 70
 .atom ellipse:nth-child(2) { animation-duration: 18s; animation-direction: reverse; }
 .qubit .state { transform-origin: 40px 40px; animation: spin 9s linear infinite; }
 .qubit .state + circle { transform-origin: 40px 40px; animation: spin 9s linear infinite; }
-.chip .core { animation: pulse 2.4s ease-in-out infinite; }
+.bh .disk { transform-origin: 40px 40px; animation: tilt 6s ease-in-out infinite; }
+.bh .d2 { animation-delay: -2s; }
+.circuit .wire { stroke-dasharray: 6 5; animation: flow 1.6s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { 50% { opacity: .35; } }
+@keyframes tilt { 50% { transform: rotate(-14deg); } }
+@keyframes flow { to { stroke-dashoffset: -22; } }
 
 .sub { color: var(--heading); font-size: 1rem; font-weight: 600; margin: 40px 0 8px; }
 .rows { list-style: none; margin: 0; padding: 0; }
