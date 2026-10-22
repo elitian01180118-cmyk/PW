@@ -45,59 +45,36 @@
       </div>
     </section>
 
-    <!-- Live crank-slider engine -->
-    <figure class="engine-panel" aria-label="Animated cross-section of a single-cylinder engine">
-      <svg id="engine" viewBox="0 0 640 330" role="img" aria-labelledby="engine-title">
-        <title id="engine-title">Animated single-cylinder four-stroke engine cross-section</title>
-        <defs>
-          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-            <path d="M20 0H0V20" fill="none" stroke="var(--line)" stroke-width="1"/>
-          </pattern>
-        </defs>
-        <rect width="640" height="330" fill="url(#grid)"/>
-
-        <!-- cylinder block -->
-        <g fill="none" stroke="var(--heading)" stroke-width="2.5" stroke-linejoin="round">
-          <path d="M248 205V40h144v165"/>
-          <path d="M232 40h176"/>
-          <path d="M290 40V22h24v18M326 40V22h24v18" stroke-width="2"/>
-          <path d="M248 205c-40 8-58 40-58 70M392 205c40 8 58 40 58 70" stroke-width="2"/>
+    <!-- Small animated racing motorcycle -->
+    <div class="ride" aria-hidden="true">
+      <svg class="bike" viewBox="0 0 220 120">
+        <g class="wheel">
+          <circle cx="45" cy="85" r="28" fill="none" stroke="var(--heading)" stroke-width="5"/>
+          <circle cx="45" cy="85" r="19" fill="none" stroke="var(--muted)" stroke-width="1.5"/>
+          <g class="spokes" stroke="var(--muted)" stroke-width="1.5"><path d="M45 66v38M26 85h38M32 72l26 26M58 72L32 98"/></g>
+          <circle cx="45" cy="85" r="4" fill="var(--accent)"/>
         </g>
-        <!-- spark plug -->
-        <path d="M320 40V12M312 12h16" stroke="var(--heading)" stroke-width="2.5" fill="none"/>
-        <!-- combustion glow -->
-        <ellipse id="burn" cx="320" cy="70" rx="58" ry="28" fill="var(--accent)" opacity="0"/>
-
-        <!-- piston + rod -->
-        <rect id="piston" x="254" y="80" width="132" height="40" rx="5" fill="var(--surface)" stroke="var(--accent)" stroke-width="2.5"/>
-        <path id="rings" d="M254 90h132M254 98h132" stroke="var(--accent)" stroke-width="1.5" opacity=".55"/>
-        <line id="rod" x1="320" y1="100" x2="320" y2="250" stroke="var(--heading)" stroke-width="7" stroke-linecap="round"/>
-        <circle id="wristpin" cx="320" cy="100" r="6" fill="var(--bg)" stroke="var(--heading)" stroke-width="2.5"/>
-
-        <!-- flywheel / crank -->
-        <g id="flywheel">
-          <circle cx="320" cy="250" r="70" fill="var(--surface)" stroke="var(--heading)" stroke-width="2.5"/>
-          <circle cx="320" cy="250" r="56" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="3 6"/>
-          <path d="M320 180v28M320 292v28M250 250h28M362 250h28" stroke="var(--muted)" stroke-width="1.5"/>
-          <path d="M320 250L320 210" stroke="var(--heading)" stroke-width="7" stroke-linecap="round"/>
-          <circle cx="320" cy="210" r="9" fill="var(--accent)"/>
+        <g class="wheel">
+          <circle cx="175" cy="85" r="28" fill="none" stroke="var(--heading)" stroke-width="5"/>
+          <circle cx="175" cy="85" r="19" fill="none" stroke="var(--muted)" stroke-width="1.5"/>
+          <g class="spokes" stroke="var(--muted)" stroke-width="1.5"><path d="M175 66v38M156 85h38M162 72l26 26M188 72L162 98"/></g>
+          <circle cx="175" cy="85" r="4" fill="var(--accent)"/>
         </g>
-        <circle cx="320" cy="250" r="9" fill="var(--bg)" stroke="var(--heading)" stroke-width="2.5"/>
-
-        <!-- labels -->
-        <g font-family="JetBrains Mono, monospace" font-size="12" fill="var(--text)">
-          <text x="24" y="38">4-STROKE · SINGLE CYL.</text>
-          <text x="24" y="58" fill="var(--accent)" id="stroke-label">INTAKE</text>
-          <text x="24" y="316">CRANK ANGLE</text>
-          <text x="130" y="316" id="angle-label" fill="var(--accent)">000°</text>
-          <text x="520" y="38">TDC</text>
-          <line x1="470" y1="34" x2="514" y2="34" stroke="var(--muted)" stroke-dasharray="3 4"/>
-          <text x="520" y="190">BDC</text>
-          <line x1="470" y1="186" x2="514" y2="186" stroke="var(--muted)" stroke-dasharray="3 4"/>
+        <!-- swingarm + fork -->
+        <path d="M45 85L95 74M176 85L158 34" stroke="var(--heading)" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <!-- fairing, tank and tail -->
+        <path d="M32 62L40 50Q58 44 78 48L112 42Q140 34 158 36L192 54Q198 58 190 62L150 70L118 78L88 80Z" fill="var(--surface)" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M150 36L160 22L172 40" fill="none" stroke="var(--heading)" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- rider -->
+        <g fill="none" stroke="var(--heading)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M100 36Q84 34 64 44"/>
+          <path d="M104 38L146 40"/>
+          <path d="M66 44L84 66L108 72"/>
         </g>
+        <circle cx="110" cy="27" r="9" fill="var(--accent)"/>
+        <circle cx="96" cy="76" r="3" fill="var(--accent)"/>
       </svg>
-      <figcaption>Crank–slider mechanism, drawn live. Replace with your own engine photo any time.</figcaption>
-    </figure>
+    </div>
 
     <section id="news">
       <h2 class="section-title">News</h2>
