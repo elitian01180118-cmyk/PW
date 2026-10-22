@@ -1,11 +1,11 @@
 :root {
   --bg: #ffffff;
   --surface: #fbf8f5;     /* warm white for cards */
-  --text: #6f5646;        /* soft coffee */
-  --heading: #4a382c;     /* deeper roast for headings */
-  --muted: #b3a090;
-  --line: #efe6dd;
-  --accent: #b4571f;      /* copper / burnt orange */
+  --text: #5a4535;        /* coffee, 9:1 contrast on white */
+  --heading: #33261d;     /* dark roast, 14:1 */
+  --muted: #7a6757;       /* secondary text, 5:1 */
+  --line: #e6dacd;
+  --accent: #b3261e;      /* racing red, 6.5:1 */
   --sidebar: 232px;
 }
 
@@ -124,7 +124,7 @@ h1 { white-space: nowrap; color: var(--heading); font-size: clamp(2.6rem, 6vw, 5
   background: repeating-linear-gradient(90deg, var(--muted) 0 24px, transparent 24px 56px);
   animation: road 1s linear infinite;
 }
-.bike { position: absolute; bottom: 0; left: -170px; width: 150px; height: auto; animation: ride 8s linear infinite; }
+.bike { position: absolute; bottom: 0; left: -190px; width: 168px; height: auto; animation: ride 8s linear infinite; }
 .wheel .spokes { transform-box: fill-box; transform-origin: center; animation: spin .5s linear infinite; }
 @keyframes ride { to { left: 100%; } }
 @keyframes road { to { background-position-x: -56px; } }
