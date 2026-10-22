@@ -179,19 +179,16 @@ h1 { white-space: nowrap; color: var(--heading); font-size: clamp(2.6rem, 6vw, 5
 .rows em { font-style: normal; font-size: .88rem; color: var(--muted); }
 
 /* ---------- Startup / product ---------- */
-.card.product { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; padding: 32px; align-items: center; }
+.card.product { padding: 32px; }
 .card.product:hover { transform: none; box-shadow: none; border-color: var(--line); }
-.tagline { color: var(--heading); font-weight: 500; margin-bottom: 10px; }
+.tagline { color: var(--heading); font-weight: 500; font-size: 1.05rem; margin-bottom: 12px; }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 24px; }
+.features div { padding: 16px 18px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.features h4 { margin: 0 0 4px; color: var(--heading); font-size: .95rem; font-weight: 600; }
+.features p { font-size: .88rem; line-height: 1.6; }
 .facts { list-style: none; margin: 18px 0 0; padding: 0; font-size: .92rem; }
 .facts li { display: flex; gap: 14px; padding: 6px 0; border-bottom: 1px dashed var(--line); }
 .facts strong { flex: none; min-width: 84px; font: 500 .75rem "JetBrains Mono", monospace; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; padding-top: 2px; }
-.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
-.btn { display: inline-block; padding: 8px 22px; border: 1px solid var(--heading); border-radius: 999px; color: var(--heading); font-size: .9rem; font-weight: 500; transition: background .2s, color .2s, border-color .2s; }
-.btn:hover { background: var(--heading); color: #fff; }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-.btn.primary:hover { background: var(--heading); border-color: var(--heading); }
-.product-shot { display: grid; place-items: center; min-height: 260px; border: 2px dashed var(--line); border-radius: 12px; background: var(--surface); color: var(--muted); font: 500 .78rem "JetBrains Mono", monospace; text-align: center; padding: 16px; }
-.product-shot img { max-width: 100%; border-radius: 10px; }
 
 /* ---------- Contact ---------- */
 .contact-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 16px; }
@@ -221,9 +218,8 @@ footer { margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--line);
   .date { text-align: left; align-self: flex-start; }
   .year { position: static; display: block; margin-bottom: 6px; }
   .card.link h3 { padding-right: 0; }
-  .card.product { grid-template-columns: 1fr; padding: 24px; }
-  .product-shot { min-height: 180px; }
-}
+  .card.product { padding: 22px; }
+  }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

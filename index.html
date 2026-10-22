@@ -95,24 +95,35 @@
     <section id="startup">
       <h2 class="section-title">Startup</h2>
       <article class="card product">
-        <div class="product-text">
-          <p class="meta">Progressive Web App · Calendar</p>
-          <h3>Product name</h3>
-          <p class="tagline">One sentence on who it helps and what they get done.</p>
-          <p>Why you built it: describe the problem you ran into yourself, and how this app solves it differently from a regular calendar. Keep it to two or three sentences.</p>
-          <ul class="facts">
-            <li><strong>Status</strong> Live / beta / prototype</li>
-            <li><strong>Users</strong> Add a real number, or leave this line out</li>
-            <li><strong>Built with</strong> e.g. JavaScript, service worker</li>
-          </ul>
-          <p class="actions">
-            <a class="btn primary" href="#">Try it live</a>
-            <a class="btn" href="#">Source code</a>
-          </p>
+        <p class="meta">Progressive Web App · iPhone</p>
+        <h3>Personal Week Planner</h3>
+        <p class="tagline">A minimal weekly schedule app: upload one screenshot of your timetable, and it shows you what to do right now.</p>
+        <p>Regular calendar apps never worked for me: they are hard to use and badly laid out. A timetable I design myself in Word works far better. I know exactly what to do, and I actually follow it. So I built an app around that habit. Each week I upload a screenshot of my timetable, an AI model reads it into a table, and the app shows me what matters at this hour. A plain-text notebook sits next to it for my thoughts.</p>
+
+        <div class="features">
+          <div>
+            <h4>Now</h4>
+            <p>The current task in large type with its start and end time, a thin progress line for the hour, and the next three tasks. Empty slots stay blank.</p>
+          </div>
+          <div>
+            <h4>Week</h4>
+            <p>The whole week as a day-by-hour grid on one page, with today and the current hour highlighted. Tap any cell to fix a misread entry.</p>
+          </div>
+          <div>
+            <h4>Import</h4>
+            <p>Upload a timetable screenshot and a Claude vision model builds the week automatically. A built-in spending cap pauses each import at US$0.30; a typical one costs about US$0.01.</p>
+          </div>
+          <div>
+            <h4>Note</h4>
+            <p>A plain-text notebook that saves as you type, reached by swiping left from the bottom bar.</p>
+          </div>
         </div>
-        <div class="product-shot" role="img" aria-label="Product screenshot placeholder">
-          <span>Screenshot or GIF of the app</span>
-        </div>
+
+        <ul class="facts">
+          <li><strong>Platform</strong> Installable PWA for iPhone, full-screen and available offline</li>
+          <li><strong>Privacy</strong> No accounts or servers. Schedule, notes and API key stay on the device; only the screenshot is sent to Anthropic for recognition</li>
+          <li><strong>Limits</strong> No reminders or push notifications. Import needs a network connection and your own Claude API key</li>
+        </ul>
       </article>
     </section>
 
