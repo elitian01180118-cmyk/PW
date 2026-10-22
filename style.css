@@ -109,29 +109,8 @@ h1 { white-space: nowrap; color: var(--heading); font-size: clamp(2.6rem, 6vw, 5
 .chips.small { margin-top: 16px; }
 .chips.small li { padding: 1px 10px; font-size: .72rem; }
 
-/* ---------- Racing bike strip ---------- */
-.ride {
-  position: relative;
-  height: 112px;
-  margin-top: 8px;
-  overflow: hidden;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-.ride::after {                 /* moving road dashes */
-  content: "";
-  position: absolute; left: 0; right: 0; bottom: 6px; height: 2px;
-  background: repeating-linear-gradient(90deg, var(--muted) 0 24px, transparent 24px 56px);
-  animation: road 1s linear infinite;
-}
-.bike { position: absolute; bottom: 0; left: -170px; width: 150px; height: auto; animation: ride 8s linear infinite; }
-.wheel .spokes { transform-box: fill-box; transform-origin: center; animation: spin .5s linear infinite; }
-@keyframes ride { to { left: 100%; } }
-@keyframes road { to { background-position-x: -56px; } }
-
-.ride-btn { position: absolute; inset: 0; z-index: 2; width: 100%; background: none; border: 0; cursor: pointer; }
-.ride-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; }
-.hint { color: var(--muted); font-style: italic; }
+.hint { padding: 0; background: none; border: 0; font: inherit; font-style: italic; color: var(--muted); cursor: pointer; }
+.hint:hover, .hint:focus-visible { color: var(--accent); }
 
 /* ---------- News ---------- */
 .news { list-style: none; margin: 0; padding: 8px 28px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
