@@ -46,62 +46,6 @@
       </div>
     </section>
 
-    <!-- Small animated racing motorcycle -->
-    <div class="ride">
-      <button class="ride-btn" type="button" id="open-arcade" aria-label="Open mini games (or press G)" title="Psst — click me"></button>
-      <svg class="bike" viewBox="0 0 300 130" aria-hidden="true">
-        <!-- exhaust and swingarm -->
-        <path d="M138 106Q112 113 82 110L64 102" fill="none" stroke="#a6a6a6" stroke-width="5" stroke-linecap="round"/>
-        <path d="M130 86L92 91V101L130 97Z" fill="#3d3d3d" stroke="#141414" stroke-width="1" stroke-linejoin="miter"/>
-
-        <!-- rear wheel -->
-        <g class="wheel">
-          <circle cx="92" cy="96" r="30" fill="#141414"/>
-          <circle cx="92" cy="96" r="21" fill="#262626" stroke="#555" stroke-width="1"/>
-          <g class="spokes" stroke="#8c8c8c" stroke-width="2.5"><path d="M92 77v38M73 96h38M79 83l26 26M105 83L79 109"/></g>
-          <circle cx="92" cy="96" r="5" fill="#141414" stroke="#c8102e" stroke-width="1.4"/>
-        </g>
-        <!-- front wheel -->
-        <g class="wheel">
-          <circle cx="240" cy="96" r="30" fill="#141414"/>
-          <circle cx="240" cy="96" r="21" fill="#262626" stroke="#555" stroke-width="1"/>
-          <circle cx="240" cy="96" r="15" fill="none" stroke="#a0a0a0" stroke-width="1.2" stroke-dasharray="2 2.4"/>
-          <g class="spokes" stroke="#8c8c8c" stroke-width="2.5"><path d="M240 77v38M221 96h38M227 83l26 26M253 83L227 109"/></g>
-          <circle cx="240" cy="96" r="5" fill="#141414" stroke="#c8102e" stroke-width="1.4"/>
-        </g>
-
-        <!-- front fork and fender -->
-        <path d="M240 96L224 40M246 96L230 42" stroke="#c9a227" stroke-width="2.6" stroke-linecap="round"/>
-        <path d="M214 77Q240 60 267 77L263 81Q240 66 218 82Z" fill="#141414"/>
-
-        <!-- engine, visible behind the lower fairing -->
-        <path d="M122 70L158 66L158 104L128 104Z" fill="#2b2b2b" stroke="#141414" stroke-width="1" stroke-linejoin="miter"/>
-        <path d="M130 72v30M139 71v32M148 69v34" stroke="#4a4a4a" stroke-width="1.2"/>
-
-        <!-- tail with upswept wing -->
-        <path d="M156 52L130 46Q104 40 88 18L72 22Q72 44 100 58L150 62Z" fill="#c8102e" stroke="#141414" stroke-width="1.1" stroke-linejoin="miter"/>
-        <path d="M96 42Q112 50 136 52L134 58Q108 56 96 50Z" fill="#141414"/>
-        <path d="M62 18L88 10L91 15L68 24Z" fill="#ededed" stroke="#141414" stroke-width="1" stroke-linejoin="miter"/>
-        <!-- seat and tank -->
-        <path d="M156 44L128 45L127 52L158 53Z" fill="#141414"/>
-        <path d="M154 44Q174 34 202 38L202 52L160 53Z" fill="#141414"/>
-        <path d="M156 44Q176 35 202 38" stroke="#c8102e" stroke-width="2" fill="none"/>
-
-        <!-- lower fairing -->
-        <path d="M232 70L190 68L166 58L150 64L136 98L140 112L206 112L228 98Z" fill="#9e0b22" stroke="#141414" stroke-width="1.1" stroke-linejoin="miter"/>
-        <path d="M138 104L220 102L206 112L140 112Z" fill="#141414"/>
-        <path d="M170 62L176 100M192 68L198 104" stroke="#141414" stroke-width=".9"/>
-
-        <!-- upper fairing, screen, winglet -->
-        <path d="M249 59L236 38L205 38L176 40L168 60L190 68L232 70Z" fill="#c8102e" stroke="#141414" stroke-width="1.1" stroke-linejoin="miter"/>
-        <path d="M236 38L224 17L208 40Z" fill="rgba(150,185,205,.42)" stroke="#141414" stroke-width="1.1" stroke-linejoin="miter"/>
-        <path d="M200 50L246 60" stroke="#f2f2f2" stroke-width="2.4"/>
-        <path d="M226 62L246 66L243 71L229 67Z" fill="#141414"/>
-        <path d="M238 40L250 59" stroke="#141414" stroke-width=".9"/>
-        <path d="M224 36L206 32" stroke="#141414" stroke-width="2.6" stroke-linecap="round"/>
-      </svg>
-    </div>
-
     <section id="news">
       <h2 class="section-title">News</h2>
       <ul class="news">
@@ -257,7 +201,7 @@
     </section>
 
     <footer>
-      <p>© <span id="year">2026</span> Yi Chen 陳毅 · <span class="hint">psst — click the bike</span></p>
+      <p>© <span id="year">2026</span> Yi Chen 陳毅 · <button class="hint" type="button" id="open-arcade">psst — press G</button></p>
     </footer>
   </main>
 
