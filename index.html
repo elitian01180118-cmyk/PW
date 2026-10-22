@@ -15,10 +15,11 @@
     <a class="logo" href="#top" aria-label="Home"><span class="mark">YC</span><span class="logo-text">Yi Chen 陳毅</span></a>
     <nav aria-label="Sections">
       <a href="#news"><span>01</span>News</a>
-      <a href="#research"><span>02</span>Current Research</a>
-      <a href="#study"><span>03</span>Current Study</a>
-      <a href="#works"><span>04</span>Works</a>
-      <a href="#contact"><span>05</span>Contact</a>
+      <a href="#startup"><span>02</span>Startup</a>
+      <a href="#research"><span>03</span>Current Research</a>
+      <a href="#study"><span>04</span>Current Study</a>
+      <a href="#works"><span>05</span>Works</a>
+      <a href="#contact"><span>06</span>Contact</a>
     </nav>
     <p class="side-note">AMO · Quantum Info · Plasma</p>
   </aside>
@@ -45,59 +46,43 @@
       </div>
     </section>
 
-    <!-- Live crank-slider engine -->
-    <figure class="engine-panel" aria-label="Animated cross-section of a single-cylinder engine">
-      <svg id="engine" viewBox="0 0 640 330" role="img" aria-labelledby="engine-title">
-        <title id="engine-title">Animated single-cylinder four-stroke engine cross-section</title>
-        <defs>
-          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-            <path d="M20 0H0V20" fill="none" stroke="var(--line)" stroke-width="1"/>
-          </pattern>
-        </defs>
-        <rect width="640" height="330" fill="url(#grid)"/>
-
-        <!-- cylinder block -->
-        <g fill="none" stroke="var(--heading)" stroke-width="2.5" stroke-linejoin="round">
-          <path d="M248 205V40h144v165"/>
-          <path d="M232 40h176"/>
-          <path d="M290 40V22h24v18M326 40V22h24v18" stroke-width="2"/>
-          <path d="M248 205c-40 8-58 40-58 70M392 205c40 8 58 40 58 70" stroke-width="2"/>
+    <!-- Small animated racing motorcycle -->
+    <div class="ride">
+      <button class="ride-btn" type="button" id="open-arcade" aria-label="Open mini games (or press G)" title="Psst — click me"></button>
+      <svg class="bike" viewBox="0 0 220 120" aria-hidden="true">
+        <g class="wheel">
+          <circle cx="45" cy="85" r="28" fill="none" stroke="var(--heading)" stroke-width="5"/>
+          <circle cx="45" cy="85" r="19" fill="none" stroke="var(--muted)" stroke-width="1.5"/>
+          <g class="spokes" stroke="var(--muted)" stroke-width="1.5"><path d="M45 66v38M26 85h38M32 72l26 26M58 72L32 98"/></g>
+          <circle cx="45" cy="85" r="4" fill="var(--accent)"/>
         </g>
-        <!-- spark plug -->
-        <path d="M320 40V12M312 12h16" stroke="var(--heading)" stroke-width="2.5" fill="none"/>
-        <!-- combustion glow -->
-        <ellipse id="burn" cx="320" cy="70" rx="58" ry="28" fill="var(--accent)" opacity="0"/>
-
-        <!-- piston + rod -->
-        <rect id="piston" x="254" y="80" width="132" height="40" rx="5" fill="var(--surface)" stroke="var(--accent)" stroke-width="2.5"/>
-        <path id="rings" d="M254 90h132M254 98h132" stroke="var(--accent)" stroke-width="1.5" opacity=".55"/>
-        <line id="rod" x1="320" y1="100" x2="320" y2="250" stroke="var(--heading)" stroke-width="7" stroke-linecap="round"/>
-        <circle id="wristpin" cx="320" cy="100" r="6" fill="var(--bg)" stroke="var(--heading)" stroke-width="2.5"/>
-
-        <!-- flywheel / crank -->
-        <g id="flywheel">
-          <circle cx="320" cy="250" r="70" fill="var(--surface)" stroke="var(--heading)" stroke-width="2.5"/>
-          <circle cx="320" cy="250" r="56" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="3 6"/>
-          <path d="M320 180v28M320 292v28M250 250h28M362 250h28" stroke="var(--muted)" stroke-width="1.5"/>
-          <path d="M320 250L320 210" stroke="var(--heading)" stroke-width="7" stroke-linecap="round"/>
-          <circle cx="320" cy="210" r="9" fill="var(--accent)"/>
+        <g class="wheel">
+          <circle cx="175" cy="85" r="28" fill="none" stroke="var(--heading)" stroke-width="5"/>
+          <circle cx="175" cy="85" r="19" fill="none" stroke="var(--muted)" stroke-width="1.5"/>
+          <g class="spokes" stroke="var(--muted)" stroke-width="1.5"><path d="M175 66v38M156 85h38M162 72l26 26M188 72L162 98"/></g>
+          <circle cx="175" cy="85" r="4" fill="var(--accent)"/>
         </g>
-        <circle cx="320" cy="250" r="9" fill="var(--bg)" stroke="var(--heading)" stroke-width="2.5"/>
-
-        <!-- labels -->
-        <g font-family="JetBrains Mono, monospace" font-size="12" fill="var(--text)">
-          <text x="24" y="38">4-STROKE · SINGLE CYL.</text>
-          <text x="24" y="58" fill="var(--accent)" id="stroke-label">INTAKE</text>
-          <text x="24" y="316">CRANK ANGLE</text>
-          <text x="130" y="316" id="angle-label" fill="var(--accent)">000°</text>
-          <text x="520" y="38">TDC</text>
-          <line x1="470" y1="34" x2="514" y2="34" stroke="var(--muted)" stroke-dasharray="3 4"/>
-          <text x="520" y="190">BDC</text>
-          <line x1="470" y1="186" x2="514" y2="186" stroke="var(--muted)" stroke-dasharray="3 4"/>
+        <!-- swingarm + fork -->
+        <path d="M45 85L98 72M176 85L156 36" stroke="var(--heading)" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <!-- engine / belly pan -->
+        <path d="M96 64L152 66L140 82L104 84Q92 82 96 64Z" fill="var(--heading)" stroke="var(--heading)" stroke-width="2" stroke-linejoin="round"/>
+        <!-- tail unit with upswept hump -->
+        <path d="M26 46Q34 38 50 40L100 46L98 62L56 64Q36 62 26 46Z" fill="var(--surface)" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- tank -->
+        <path d="M98 44Q116 34 148 38L148 66L98 64Z" fill="var(--accent)" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- front fairing: pointed nose and screen -->
+        <path d="M144 30Q178 28 212 58Q206 66 190 66L144 68Z" fill="var(--surface)" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M146 30L152 18L166 32" fill="none" stroke="var(--heading)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <!-- rider, tucked in -->
+        <g fill="none" stroke="var(--heading)" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M70 40L112 26" stroke-width="10"/>
+          <path d="M114 30L146 34" stroke-width="4"/>
+          <path d="M72 42L102 54L96 74" stroke-width="6"/>
         </g>
+        <circle cx="124" cy="22" r="9" fill="var(--accent)" stroke="var(--heading)" stroke-width="2"/>
+        <path d="M126 20h8" stroke="var(--surface)" stroke-width="3" stroke-linecap="round"/>
       </svg>
-      <figcaption>Crank–slider mechanism, drawn live. Replace with your own engine photo any time.</figcaption>
-    </figure>
+    </div>
 
     <section id="news">
       <h2 class="section-title">News</h2>
@@ -106,6 +91,41 @@
         <li><span class="date">Month 2026</span><p>Add a milestone here — a new course, a lab you joined, a talk you gave.</p></li>
         <li><span class="date">Month 2026</span><p>Add another update here. Keep each one to a sentence or two.</p></li>
       </ul>
+    </section>
+
+    <section id="startup">
+      <h2 class="section-title">Startup</h2>
+      <article class="card product">
+        <p class="meta">Progressive Web App · iPhone</p>
+        <h3>Personal Week Planner</h3>
+        <p class="tagline">A minimal weekly schedule app: upload one screenshot of your timetable, and it shows you what to do right now.</p>
+        <p>Regular calendar apps never worked for me: they are hard to use and badly laid out. A timetable I design myself in Word works far better. I know exactly what to do, and I actually follow it. So I built an app around that habit. Each week I upload a screenshot of my timetable, an AI model reads it into a table, and the app shows me what matters at this hour. A plain-text notebook sits next to it for my thoughts.</p>
+
+        <div class="features">
+          <div>
+            <h4>Now</h4>
+            <p>The current task in large type with its start and end time, a thin progress line for the hour, and the next three tasks. Empty slots stay blank.</p>
+          </div>
+          <div>
+            <h4>Week</h4>
+            <p>The whole week as a day-by-hour grid on one page, with today and the current hour highlighted. Tap any cell to fix a misread entry.</p>
+          </div>
+          <div>
+            <h4>Import</h4>
+            <p>Upload a timetable screenshot and a Claude vision model builds the week automatically. A built-in spending cap pauses each import at US$0.30; a typical one costs about US$0.01.</p>
+          </div>
+          <div>
+            <h4>Note</h4>
+            <p>A plain-text notebook that saves as you type, reached by swiping left from the bottom bar.</p>
+          </div>
+        </div>
+
+        <ul class="facts">
+          <li><strong>Platform</strong> Installable PWA for iPhone, full-screen and available offline</li>
+          <li><strong>Privacy</strong> No accounts or servers. Schedule, notes and API key stay on the device; only the screenshot is sent to Anthropic for recognition</li>
+          <li><strong>Limits</strong> No reminders or push notifications. Import needs a network connection and your own Claude API key</li>
+        </ul>
+      </article>
     </section>
 
     <section id="research">
@@ -219,10 +239,49 @@
     </section>
 
     <footer>
-      <p>© <span id="year">2026</span> Yi Chen 陳毅</p>
+      <p>© <span id="year">2026</span> Yi Chen 陳毅 · <span class="hint">psst — click the bike</span></p>
     </footer>
   </main>
 
+  <!-- Easter egg: mini games -->
+  <dialog id="arcade" aria-label="Mini games">
+    <div class="arcade-head">
+      <div class="tabs" role="tablist">
+        <button role="tab" id="tab-react" aria-controls="panel-react" aria-selected="true">Reaction</button>
+        <button role="tab" id="tab-qubit" aria-controls="panel-qubit" aria-selected="false">Qubit</button>
+      </div>
+      <button class="close" id="arcade-close" aria-label="Close">×</button>
+    </div>
+
+    <div id="panel-react" role="tabpanel" aria-labelledby="tab-react">
+      <p class="g-title">Lights out</p>
+      <p class="g-help">Five lights come on, one by one. When they all go out, hit the pad as fast as you can. Move too early and it's a jump start.</p>
+      <div class="lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <button class="pad" id="pad">Start</button>
+      <p class="g-result" id="react-msg" aria-live="polite">Press Start (or Space).</p>
+      <p class="g-best">Best <strong id="react-best">—</strong></p>
+    </div>
+
+    <div id="panel-qubit" role="tabpanel" aria-labelledby="tab-qubit" hidden>
+      <p class="g-title">Rotate the qubit</p>
+      <p class="g-help">Start from |0⟩ and apply gates to land on the target state (the open ring). Fewer gates is better.</p>
+      <div class="q-layout">
+        <svg id="bloch" viewBox="-150 -140 300 280" role="img" aria-label="Bloch sphere"></svg>
+        <div class="q-side">
+          <p class="q-level" id="q-level"></p>
+          <div class="gates" id="gates"></div>
+          <div class="q-actions">
+            <button id="q-undo">Undo</button>
+            <button id="q-reset">Reset</button>
+            <button id="q-next" hidden>Next level →</button>
+          </div>
+          <p class="g-result" id="q-msg" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
   <script src="main.js"></script>
+  <script src="arcade.js"></script>
 </body>
 </html>
