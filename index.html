@@ -46,44 +46,6 @@
       </div>
     </section>
 
-    <!-- Small animated racing motorcycle -->
-    <div class="ride">
-      <button class="ride-btn" type="button" id="open-arcade" aria-label="Open mini games (or press G)" title="Psst — click me"></button>
-      <svg class="bike" viewBox="0 0 220 120" aria-hidden="true">
-        <g class="wheel">
-          <circle cx="45" cy="85" r="28" fill="none" stroke="var(--heading)" stroke-width="5"/>
-          <circle cx="45" cy="85" r="19" fill="none" stroke="var(--muted)" stroke-width="1.5"/>
-          <g class="spokes" stroke="var(--muted)" stroke-width="1.5"><path d="M45 66v38M26 85h38M32 72l26 26M58 72L32 98"/></g>
-          <circle cx="45" cy="85" r="4" fill="var(--accent)"/>
-        </g>
-        <g class="wheel">
-          <circle cx="175" cy="85" r="28" fill="none" stroke="var(--heading)" stroke-width="5"/>
-          <circle cx="175" cy="85" r="19" fill="none" stroke="var(--muted)" stroke-width="1.5"/>
-          <g class="spokes" stroke="var(--muted)" stroke-width="1.5"><path d="M175 66v38M156 85h38M162 72l26 26M188 72L162 98"/></g>
-          <circle cx="175" cy="85" r="4" fill="var(--accent)"/>
-        </g>
-        <!-- swingarm + fork -->
-        <path d="M45 85L98 72M176 85L156 36" stroke="var(--heading)" stroke-width="4" stroke-linecap="round" fill="none"/>
-        <!-- engine / belly pan -->
-        <path d="M96 64L152 66L140 82L104 84Q92 82 96 64Z" fill="var(--heading)" stroke="var(--heading)" stroke-width="2" stroke-linejoin="round"/>
-        <!-- tail unit with upswept hump -->
-        <path d="M26 46Q34 38 50 40L100 46L98 62L56 64Q36 62 26 46Z" fill="var(--surface)" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
-        <!-- tank -->
-        <path d="M98 44Q116 34 148 38L148 66L98 64Z" fill="var(--accent)" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
-        <!-- front fairing: pointed nose and screen -->
-        <path d="M144 30Q178 28 212 58Q206 66 190 66L144 68Z" fill="var(--surface)" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
-        <path d="M146 30L152 18L166 32" fill="none" stroke="var(--heading)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-        <!-- rider, tucked in -->
-        <g fill="none" stroke="var(--heading)" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M70 40L112 26" stroke-width="10"/>
-          <path d="M114 30L146 34" stroke-width="4"/>
-          <path d="M72 42L102 54L96 74" stroke-width="6"/>
-        </g>
-        <circle cx="124" cy="22" r="9" fill="var(--accent)" stroke="var(--heading)" stroke-width="2"/>
-        <path d="M126 20h8" stroke="var(--surface)" stroke-width="3" stroke-linecap="round"/>
-      </svg>
-    </div>
-
     <section id="news">
       <h2 class="section-title">News</h2>
       <ul class="news">
@@ -239,7 +201,7 @@
     </section>
 
     <footer>
-      <p>© <span id="year">2026</span> Yi Chen 陳毅 · <span class="hint">psst — click the bike</span></p>
+      <p>© <span id="year">2026</span> Yi Chen 陳毅 · <button class="hint" type="button" id="open-arcade">psst — press G</button></p>
     </footer>
   </main>
 
