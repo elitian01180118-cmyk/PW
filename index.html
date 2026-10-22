@@ -49,49 +49,56 @@
     <!-- Small animated racing motorcycle -->
     <div class="ride">
       <button class="ride-btn" type="button" id="open-arcade" aria-label="Open mini games (or press G)" title="Psst — click me"></button>
-      <svg class="bike" viewBox="0 0 240 120" aria-hidden="true">
-        <!-- exhaust -->
-        <path d="M110 84L66 90Q54 91 46 84" fill="none" stroke="#8a8a8a" stroke-width="5" stroke-linecap="round"/>
-        <!-- wheels -->
+      <svg class="bike" viewBox="0 0 300 130" aria-hidden="true">
+        <!-- exhaust and swingarm -->
+        <path d="M138 106Q112 113 82 110L64 102" fill="none" stroke="#a6a6a6" stroke-width="5" stroke-linecap="round"/>
+        <path d="M130 86L92 91V101L130 97Z" fill="#3d3d3d" stroke="#141414" stroke-width="1" stroke-linejoin="miter"/>
+
+        <!-- rear wheel -->
         <g class="wheel">
-          <circle cx="48" cy="86" r="26" fill="none" stroke="#1c1c1c" stroke-width="8"/>
-          <circle cx="48" cy="86" r="17" fill="#fff" stroke="#8a8a8a" stroke-width="2"/>
-          <g class="spokes" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"><path d="M48 70v32M32 86h32M37 75l22 22M59 75L37 97"/></g>
-          <circle cx="48" cy="86" r="4" fill="#c8102e"/>
+          <circle cx="92" cy="96" r="30" fill="#141414"/>
+          <circle cx="92" cy="96" r="21" fill="#262626" stroke="#555" stroke-width="1"/>
+          <g class="spokes" stroke="#8c8c8c" stroke-width="2.5"><path d="M92 77v38M73 96h38M79 83l26 26M105 83L79 109"/></g>
+          <circle cx="92" cy="96" r="5" fill="#141414" stroke="#c8102e" stroke-width="1.4"/>
         </g>
+        <!-- front wheel -->
         <g class="wheel">
-          <circle cx="192" cy="86" r="26" fill="none" stroke="#1c1c1c" stroke-width="8"/>
-          <circle cx="192" cy="86" r="17" fill="#fff" stroke="#8a8a8a" stroke-width="2"/>
-          <g class="spokes" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"><path d="M192 70v32M176 86h32M181 75l22 22M203 75L181 97"/></g>
-          <circle cx="192" cy="86" r="4" fill="#c8102e"/>
+          <circle cx="240" cy="96" r="30" fill="#141414"/>
+          <circle cx="240" cy="96" r="21" fill="#262626" stroke="#555" stroke-width="1"/>
+          <circle cx="240" cy="96" r="15" fill="none" stroke="#a0a0a0" stroke-width="1.2" stroke-dasharray="2 2.4"/>
+          <g class="spokes" stroke="#8c8c8c" stroke-width="2.5"><path d="M240 77v38M221 96h38M227 83l26 26M253 83L227 109"/></g>
+          <circle cx="240" cy="96" r="5" fill="#141414" stroke="#c8102e" stroke-width="1.4"/>
         </g>
-        <!-- swingarm and gold forks -->
-        <path d="M48 86L110 76" stroke="#555" stroke-width="5" stroke-linecap="round" fill="none"/>
-        <path d="M192 86L172 36" stroke="#c9a227" stroke-width="5" stroke-linecap="round" fill="none"/>
-        <!-- engine -->
-        <path d="M98 62L152 64L148 84L104 88Z" fill="#2a2a2a"/>
+
+        <!-- front fork and fender -->
+        <path d="M240 96L224 40M246 96L230 42" stroke="#c9a227" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M214 77Q240 60 267 77L263 81Q240 66 218 82Z" fill="#141414"/>
+
+        <!-- engine, visible behind the lower fairing -->
+        <path d="M122 70L158 66L158 104L128 104Z" fill="#2b2b2b" stroke="#141414" stroke-width="1" stroke-linejoin="miter"/>
+        <path d="M130 72v30M139 71v32M148 69v34" stroke="#4a4a4a" stroke-width="1.2"/>
+
+        <!-- tail with upswept wing -->
+        <path d="M156 52L130 46Q104 40 88 18L72 22Q72 44 100 58L150 62Z" fill="#c8102e" stroke="#141414" stroke-width="1.1" stroke-linejoin="miter"/>
+        <path d="M96 42Q112 50 136 52L134 58Q108 56 96 50Z" fill="#141414"/>
+        <path d="M62 18L88 10L91 15L68 24Z" fill="#ededed" stroke="#141414" stroke-width="1" stroke-linejoin="miter"/>
+        <!-- seat and tank -->
+        <path d="M156 44L128 45L127 52L158 53Z" fill="#141414"/>
+        <path d="M154 44Q174 34 202 38L202 52L160 53Z" fill="#141414"/>
+        <path d="M156 44Q176 35 202 38" stroke="#c8102e" stroke-width="2" fill="none"/>
+
         <!-- lower fairing -->
-        <path d="M104 68L158 68L166 84L112 92Q96 88 104 68Z" fill="#a30d25" stroke="#1c1c1c" stroke-width="1.5" stroke-linejoin="round"/>
-        <!-- tail with rear wing -->
-        <path d="M24 30L56 22L60 28L32 38Z" fill="#fff" stroke="#1c1c1c" stroke-width="1.5" stroke-linejoin="round"/>
-        <path d="M30 42Q36 32 58 36L98 46L96 64L52 64Q36 60 30 42Z" fill="#c8102e" stroke="#1c1c1c" stroke-width="1.5" stroke-linejoin="round"/>
-        <!-- tank / seat -->
-        <path d="M96 44Q118 34 150 38L150 66L96 64Z" fill="#1c1c1c"/>
-        <path d="M60 40L98 46L98 52L60 46Z" fill="#1c1c1c"/>
-        <!-- front fairing, screen and winglet -->
-        <path d="M148 32Q188 32 222 62Q216 72 198 70L150 72Z" fill="#c8102e" stroke="#1c1c1c" stroke-width="1.5" stroke-linejoin="round"/>
-        <path d="M150 32L158 14Q168 20 180 38Z" fill="rgba(150,185,205,.45)" stroke="#1c1c1c" stroke-width="1.5" stroke-linejoin="round"/>
-        <path d="M184 56L204 52L202 60L184 62Z" fill="#1c1c1c"/>
-        <path d="M150 50L196 56" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-        <!-- rider -->
-        <g fill="none" stroke="#1c1c1c" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M70 42L114 28" stroke-width="11"/>
-          <path d="M116 32L150 36" stroke-width="4.5"/>
-          <path d="M72 44L104 56L98 78" stroke-width="7"/>
-        </g>
-        <circle cx="128" cy="23" r="9.5" fill="#fff" stroke="#1c1c1c" stroke-width="2"/>
-        <path d="M130 20h9" stroke="#1c1c1c" stroke-width="4" stroke-linecap="round"/>
-        <path d="M122 16Q128 13 134 15" stroke="#c8102e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M232 70L190 68L166 58L150 64L136 98L140 112L206 112L228 98Z" fill="#9e0b22" stroke="#141414" stroke-width="1.1" stroke-linejoin="miter"/>
+        <path d="M138 104L220 102L206 112L140 112Z" fill="#141414"/>
+        <path d="M170 62L176 100M192 68L198 104" stroke="#141414" stroke-width=".9"/>
+
+        <!-- upper fairing, screen, winglet -->
+        <path d="M249 59L236 38L205 38L176 40L168 60L190 68L232 70Z" fill="#c8102e" stroke="#141414" stroke-width="1.1" stroke-linejoin="miter"/>
+        <path d="M236 38L224 17L208 40Z" fill="rgba(150,185,205,.42)" stroke="#141414" stroke-width="1.1" stroke-linejoin="miter"/>
+        <path d="M200 50L246 60" stroke="#f2f2f2" stroke-width="2.4"/>
+        <path d="M226 62L246 66L243 71L229 67Z" fill="#141414"/>
+        <path d="M238 40L250 59" stroke="#141414" stroke-width=".9"/>
+        <path d="M224 36L206 32" stroke="#141414" stroke-width="2.6" stroke-linecap="round"/>
       </svg>
     </div>
 

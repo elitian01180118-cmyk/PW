@@ -124,7 +124,7 @@ h1 { white-space: nowrap; color: var(--heading); font-size: clamp(2.6rem, 6vw, 5
   background: repeating-linear-gradient(90deg, var(--muted) 0 24px, transparent 24px 56px);
   animation: road 1s linear infinite;
 }
-.bike { position: absolute; bottom: 0; left: -190px; width: 168px; height: auto; animation: ride 8s linear infinite; }
+.bike { position: absolute; bottom: 0; left: -230px; width: 210px; height: auto; animation: ride 8s linear infinite; }
 .wheel .spokes { transform-box: fill-box; transform-origin: center; animation: spin .5s linear infinite; }
 @keyframes ride { to { left: 100%; } }
 @keyframes road { to { background-position-x: -56px; } }
