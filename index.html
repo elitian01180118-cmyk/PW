@@ -47,8 +47,9 @@
     </section>
 
     <!-- Small animated racing motorcycle -->
-    <div class="ride" aria-hidden="true">
-      <svg class="bike" viewBox="0 0 220 120">
+    <div class="ride">
+      <button class="ride-btn" type="button" id="open-arcade" aria-label="Open mini games (or press G)" title="Psst — click me"></button>
+      <svg class="bike" viewBox="0 0 220 120" aria-hidden="true">
         <g class="wheel">
           <circle cx="45" cy="85" r="28" fill="none" stroke="var(--heading)" stroke-width="5"/>
           <circle cx="45" cy="85" r="19" fill="none" stroke="var(--muted)" stroke-width="1.5"/>
@@ -238,10 +239,49 @@
     </section>
 
     <footer>
-      <p>© <span id="year">2026</span> Yi Chen 陳毅</p>
+      <p>© <span id="year">2026</span> Yi Chen 陳毅 · <span class="hint">psst — click the bike</span></p>
     </footer>
   </main>
 
+  <!-- Easter egg: mini games -->
+  <dialog id="arcade" aria-label="Mini games">
+    <div class="arcade-head">
+      <div class="tabs" role="tablist">
+        <button role="tab" id="tab-react" aria-controls="panel-react" aria-selected="true">Reaction</button>
+        <button role="tab" id="tab-qubit" aria-controls="panel-qubit" aria-selected="false">Qubit</button>
+      </div>
+      <button class="close" id="arcade-close" aria-label="Close">×</button>
+    </div>
+
+    <div id="panel-react" role="tabpanel" aria-labelledby="tab-react">
+      <p class="g-title">Lights out</p>
+      <p class="g-help">Five lights come on, one by one. When they all go out, hit the pad as fast as you can. Move too early and it's a jump start.</p>
+      <div class="lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <button class="pad" id="pad">Start</button>
+      <p class="g-result" id="react-msg" aria-live="polite">Press Start (or Space).</p>
+      <p class="g-best">Best <strong id="react-best">—</strong></p>
+    </div>
+
+    <div id="panel-qubit" role="tabpanel" aria-labelledby="tab-qubit" hidden>
+      <p class="g-title">Rotate the qubit</p>
+      <p class="g-help">Start from |0⟩ and apply gates to land on the target state (the open ring). Fewer gates is better.</p>
+      <div class="q-layout">
+        <svg id="bloch" viewBox="-150 -140 300 280" role="img" aria-label="Bloch sphere"></svg>
+        <div class="q-side">
+          <p class="q-level" id="q-level"></p>
+          <div class="gates" id="gates"></div>
+          <div class="q-actions">
+            <button id="q-undo">Undo</button>
+            <button id="q-reset">Reset</button>
+            <button id="q-next" hidden>Next level →</button>
+          </div>
+          <p class="g-result" id="q-msg" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
   <script src="main.js"></script>
+  <script src="arcade.js"></script>
 </body>
 </html>
