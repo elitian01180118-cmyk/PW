@@ -166,10 +166,13 @@ h1 { white-space: nowrap; color: var(--heading); font-size: clamp(2.6rem, 6vw, 5
 .rows em { font-style: normal; font-size: .88rem; color: var(--muted); }
 
 /* ---------- Startup / product ---------- */
-.card.product { padding: 32px; }
+.card.product { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 36px; align-items: start; padding: 32px; }
+.product-media { margin: 0; position: sticky; top: 24px; }
+.product-media video { display: block; width: 100%; height: auto; aspect-ratio: 249 / 550; border-radius: 22px; border: 1px solid var(--line); background: var(--surface); box-shadow: 0 14px 30px -16px rgba(51, 38, 29, .45); }
+.product-media figcaption { margin-top: 10px; text-align: center; font: 500 .72rem "JetBrains Mono", monospace; color: var(--muted); }
 .card.product:hover { transform: none; box-shadow: none; border-color: var(--line); }
 .tagline { color: var(--heading); font-weight: 500; font-size: 1.05rem; margin-bottom: 12px; }
-.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 24px; }
+.features { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 24px; }
 .features div { padding: 16px 18px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
 .features h4 { margin: 0 0 4px; color: var(--heading); font-size: .95rem; font-weight: 600; }
 .features p { font-size: .88rem; line-height: 1.6; }
@@ -243,7 +246,9 @@ button:disabled { opacity: .45; cursor: default; }
   .date { text-align: left; align-self: flex-start; }
   .year { position: static; display: block; margin-bottom: 6px; }
   .card.link h3 { padding-right: 0; }
-  .card.product { padding: 22px; }
+  .card.product { grid-template-columns: 1fr; padding: 22px; }
+  .product-media { position: static; max-width: 280px; margin: 8px auto 0; order: 2; }
+  .features { grid-template-columns: 1fr; }
   }
 
 @media (prefers-reduced-motion: reduce) {
